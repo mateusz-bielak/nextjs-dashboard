@@ -14,10 +14,7 @@ import { formatCurrency } from './utils';
 export async function fetchRevenue() {
   noStore();
   try {
-    // Artificially delay a reponse for demo purposes.
-    // Don't do this in real life :)
-
-    console.log('Fetching revenue data...');
+    // Artificially delay a response for demo purposes.
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
